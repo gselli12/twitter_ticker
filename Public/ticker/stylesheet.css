@@ -1,0 +1,23 @@
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.line {
+    font-family: Trebuchet MS;
+    text-decoration: none;
+    padding-right: 40px;
+    color: black;
+}
+
+.line:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+#headlines {
+    position: absolute;
+    top: 0px;
+    left:100%;
+    white-space: nowrap;
+}

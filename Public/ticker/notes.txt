@@ -1,0 +1,29 @@
+if not in strict mode .this will refer to the global object
+
+When a function is called as a method of an object .this will refer to the function of the object
+
+When you just get a variable to refer to an object .this will refer to the global object
+If you want to use a method on a specific obejct you can apply this method on another object by using .call or .apply (slight differences in syntax)
+
+--
+for CSS stickfigure: transform-origin:
+body parts: position: absolute
+everything into one div; position: relative
+-- 
+the Document object Model (DOM)
+Sceme in which objects represent html elements!
+Browser will first run JS and then run everything else (you can see this in e.g. in a window.alert, where everything else only runs after clicking away the alert)
+.querySelectorAll saves the value at the time it is being called (if you add a matching query later on, it will not change)
+CSS properties get converted to JS convetion (e.g. background-color becomes backgroundColor)
+--
+Ticker: Animation that uses JS instead of CSS; 
+new option: requestAnimationFrame - similar to setTimeOut but uses the time your monitor redraws as the time it delays (-> use it in seperate function like moveHeadlines)
+find out current position and move it by 1 the next time moveHeadlines is called!
+use padding for spacing between headlines
+start headlines at top:0 and left: 100%
+Step 1: have headlines move across page once
+in JS create an iife first to make sure nobody can mess with my variables
+to prevent wrapping: white-spacing: nowrap;
+Step 2: make an infinite loop; get enough links for the effect to work; move div that containes headlines and everything inside just comes along. As soon as first link is off-screen, take it out and make it the last link (to reapper)! After that your headlines will jump to the left by the space that headline takes up (you can determin how wide something is by .offsetWidth). AppendChild automatically removes the element it will append!
+Step 3: make it respond to user events
+
