@@ -1,15 +1,9 @@
 const express = require("express");
 const app = express();
-
 const {filter} = require("./filter.js");
-
 const {getToken, getTweets} = require("./requests.js");
 
-//const {promises} = require("./promises.js");
-
 app.use(express.static(__dirname + "/Public/ticker"));
-
-//const handles = ["DieTagespresse"];
 
 //defining GET request to "/headlines.json"
 //getToken gets getTweets as a callback. getTweets gets filter as a callback
